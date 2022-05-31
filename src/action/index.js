@@ -1,8 +1,6 @@
-export const storeEven = (num) =>{
-
-    console.log("Action Data : " + num)
-    return {
-        type : "storeEven",
-        payload : num,
-    }
+export const storeEven = (num) => {
+  return {
+    type: 'storeEven',
+    payload: num,
+  }
 }

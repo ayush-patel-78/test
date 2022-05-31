@@ -1,14 +1,15 @@
-const initialState = {number : null, employee : []};
+const check = (state = { number: 0, employee: [] }, action) => {
+  switch (action.type) {
+    case 'storeEven':
+      return {
+        ...state,
+        number: action.payload.number,
+        employee: action.payload.data,
+      }
 
-const check = (state = initialState, action) => {
-    switch (action.type) {
-      case 'storeEven':
-        initialState.number = action.payload.number;
-        initialState.employee = action.payload.data.data;
-        return state = initialState
-      default:
-        return state
-    }
+    default:
+      return state
   }
-   
-export default check;
+}
+
+export default check
